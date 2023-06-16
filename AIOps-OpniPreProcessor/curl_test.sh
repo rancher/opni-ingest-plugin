@@ -3,15 +3,12 @@ curl -XPUT localhost:9200/_ingest/pipeline/my_simple_pipeline \
 -d '{
     "processors": [
         {
-            "opnipre": {
-                "field": "log",
-                "target_field": "masked_log"
-            }
+            "opnipre": {}
         }
     ]
 }'
-
-sleep 2
+echo '/n'
+sleep 5
 
 curl -XPUT localhost:9200/my_index \
 -H "Content-Type: application/json" \
@@ -20,13 +17,13 @@ curl -XPUT localhost:9200/my_index \
         "index.default_pipeline": "my_simple_pipeline"
     }
 }'
-
-sleep 1
+echo '/n'
+sleep 5
 
 curl -XPOST localhost:9200/my_index/_doc \
 -H "Content-Type: application/json" \
 -d @example.txt
-
-sleep 1
+echo '/n'
+sleep 5
 
 curl -X GET localhost:9200/my_index/_search

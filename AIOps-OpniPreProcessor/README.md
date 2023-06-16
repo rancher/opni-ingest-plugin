@@ -42,16 +42,17 @@ this command runs all the tests
 ```
 
 ### Install the pipeline in Opensearch
+To test out the pipeline and the plugin, run `curl_test.sh` file.
+
+Alternatively, the following `curl` requests can be used to be tested.
+
 create the pipeline
 ``` 
 PUT _ingest/pipeline/opni-ingest-pipeline
 {
     "processors": [
         {
-            "opnipre": {
-                "field": "log",
-                "target_field": "masked_log"
-            }
+            "opnipre": {}
         }
     ]
 }
