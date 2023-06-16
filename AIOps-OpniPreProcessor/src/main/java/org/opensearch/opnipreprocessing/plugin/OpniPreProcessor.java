@@ -72,6 +72,7 @@ import java.net.http.HttpResponse;
 public final class OpniPreProcessor extends AbstractProcessor {
 
     public static final String TYPE = "opnipre";
+    public static final String pretrainedServiceURL = "http://localhost:8000/";
 
     private final OpniPreprocessingConfig config;
     private Connection nc;
@@ -372,7 +373,6 @@ public final class OpniPreProcessor extends AbstractProcessor {
                     .thenApply(HttpResponse::body)
                     .join();
         } catch (Exception e) {
-            throw e;
         }
         
     }

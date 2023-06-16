@@ -6,4 +6,7 @@ permission java.lang.RuntimePermission "accessDeclaredMembers";
 permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
 //nkey
 permission java.io.FilePermission "<<ALL FILES>>", "read";
+//http
+permission java.net.URLPermission "http://localhost:8000/", "POST,GET,DELETE";
+permission org.opensearch.secure_sm.ThreadPermission "modifyArbitraryThreadGroup";
 };
