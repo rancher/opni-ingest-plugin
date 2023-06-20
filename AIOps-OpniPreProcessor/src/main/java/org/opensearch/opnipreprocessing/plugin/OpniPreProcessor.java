@@ -72,7 +72,7 @@ import java.net.http.HttpResponse;
 public final class OpniPreProcessor extends AbstractProcessor {
 
     public static final String TYPE = "opnipre";
-    public static final String pretrainedServiceURL = "http://localhost:8000/";
+    public static final String pretrainedServiceURL = "http://opni-pretrained-serve-svc.kuberay.svc:8000/";
 
     private final OpniPreprocessingConfig config;
     private Connection nc;
@@ -111,7 +111,7 @@ public final class OpniPreProcessor extends AbstractProcessor {
                     ingestDocument.setFieldValue("_id", generated_id);
                     preprocessingDocument(ingestDocument);
                     publishToNats(ingestDocument, nc);
-                    sendHTTP(ingestDocument, "http://opni-pretrained-serve-svc.kuberay.svc:8000");
+                    sendHTTP(ingestDocument, pretrainedServiceURL);
 
                     long endTime = System.nanoTime();
                     //ingestDocument.setFieldValue("aiops_extraction_time_ms", (endTime-startTime) / 1000000.0);
