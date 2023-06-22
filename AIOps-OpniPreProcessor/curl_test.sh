@@ -8,9 +8,9 @@ curl -XPUT localhost:9200/_ingest/pipeline/my_simple_pipeline \
     ]
 }'
 echo '/n'
-sleep 5
+sleep 3
 
-curl -XPUT localhost:9200/my_index \
+curl -XPUT localhost:9200/logs \
 -H "Content-Type: application/json" \
 -d '{
     "settings": {
@@ -18,12 +18,11 @@ curl -XPUT localhost:9200/my_index \
     }
 }'
 echo '/n'
-sleep 5
+sleep 3
 
-curl -XPOST localhost:9200/my_index/_doc \
+curl -XPOST localhost:9200/logs/_doc \
 -H "Content-Type: application/json" \
 -d @example.txt
-echo '/n'
-sleep 5
+sleep 3
 
-curl -X GET localhost:9200/my_index/_search
+curl -X GET localhost:9200/logs/_search

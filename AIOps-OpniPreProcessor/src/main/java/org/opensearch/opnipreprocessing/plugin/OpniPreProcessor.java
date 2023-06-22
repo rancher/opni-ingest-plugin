@@ -363,15 +363,14 @@ public final class OpniPreProcessor extends AbstractProcessor {
 
         try {
             // send payload as http request
-            HttpClient client = HttpClient.newHttpClient();
+            HttpClient client = HttpClient.newBuilder().executor(Runnable::run).build();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(url))
+                    .header("Content-Type", "application/octet-stream")
                     .POST(HttpRequest.BodyPublishers.ofByteArray(payload.toByteArray()))
                     .build();
     
-            client.sendAsync(request, HttpResponse.BodyHandlers.ofByteArray())
-                    .thenApply(HttpResponse::body)
-                    .join();
+            client.send(request, HttpResponse.BodyHandlers.ofByteArray());
         } catch (Exception e) {
         }
         
