@@ -109,9 +109,11 @@ public final class OpniPreProcessor extends AbstractProcessor {
 
                     String generated_id = getRandomID();
                     ingestDocument.setFieldValue("_id", generated_id);
+                    ingestDocument.setFieldValue("opensearch_update_ray_time", 0);
+                    ingestDocument.setFieldValue("opensearch_update_current_time", 0);
                     preprocessingDocument(ingestDocument);
                     publishToNats(ingestDocument, nc);
-                    sendHTTP(ingestDocument, pretrainedServiceURL);
+                    sendPretrainedHTTP(ingestDocument, pretrainedServiceURL);
 
                     long endTime = System.nanoTime();
                     //ingestDocument.setFieldValue("aiops_extraction_time_ms", (endTime-startTime) / 1000000.0);
@@ -342,9 +344,12 @@ public final class OpniPreProcessor extends AbstractProcessor {
         nc.publish("raw_logs", payload.toByteArray() );
     }
 
-    private void sendHTTP(IngestDocument ingestDocument, String url) throws PrivilegedActionException {
+    private void sendPretrainedHTTP(IngestDocument ingestDocument, String url) throws PrivilegedActionException {
         // skip non inferred logs
-        if (ingestDocument.getFieldValue("log_type", String.class).equals("event")) {
+        if (
+            ingestDocument.getFieldValue("log_type", String.class).equals("event") ||
+            ingestDocument.getFieldValue("log_type", String.class).equals("workload")
+            ) {
             return;
         }
         if (isOtelCollector(ingestDocument)) {
