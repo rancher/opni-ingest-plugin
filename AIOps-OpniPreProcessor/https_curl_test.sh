@@ -3,10 +3,7 @@ curl -XPUT -u admin:admin --insecure https://localhost:9200/_ingest/pipeline/my_
 -d '{
     "processors": [
         {
-            "opnipre": {
-                "field": "log",
-                "target_field": "masked_log"
-            }
+            "opnipre": {}
         }
     ]
 }'

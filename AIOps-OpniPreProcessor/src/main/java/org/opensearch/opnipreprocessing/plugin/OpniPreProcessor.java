@@ -26,6 +26,7 @@ import java.util.Date;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.util.UUID;
+
 import org.opensearch.common.io.PathUtils;
 
 
@@ -61,11 +62,17 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.lang.NullPointerException;
 
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
 
 
 public final class OpniPreProcessor extends AbstractProcessor {
 
     public static final String TYPE = "opnipre";
+    public static final String pretrainedServiceURL = "http://opni-pretrained-serve-svc.kuberay.svc:8000/";
 
     private final OpniPreprocessingConfig config;
     private Connection nc;
@@ -102,8 +109,11 @@ public final class OpniPreProcessor extends AbstractProcessor {
 
                     String generated_id = getRandomID();
                     ingestDocument.setFieldValue("_id", generated_id);
+                    ingestDocument.setFieldValue("opensearch_update_ray_time", 0);
+                    ingestDocument.setFieldValue("opensearch_update_current_time", 0);
                     preprocessingDocument(ingestDocument);
                     publishToNats(ingestDocument, nc);
+                    sendPretrainedHTTP(ingestDocument, pretrainedServiceURL);
 
                     long endTime = System.nanoTime();
                     //ingestDocument.setFieldValue("aiops_extraction_time_ms", (endTime-startTime) / 1000000.0);
@@ -332,6 +342,43 @@ public final class OpniPreProcessor extends AbstractProcessor {
                   .setDeployment(ingestDocument.getFieldValue("deployment", String.class))
                   .setService(ingestDocument.getFieldValue("service", String.class)).build();
         nc.publish("raw_logs", payload.toByteArray() );
+    }
+
+    private void sendPretrainedHTTP(IngestDocument ingestDocument, String url) throws PrivilegedActionException {
+        // skip non inferred logs
+        if (
+            ingestDocument.getFieldValue("log_type", String.class).equals("event") ||
+            ingestDocument.getFieldValue("log_type", String.class).equals("workload")
+            ) {
+            return;
+        }
+        if (isOtelCollector(ingestDocument)) {
+            return;
+        }
+        
+        OpniPayloadProto.Payload payload = OpniPayloadProto.Payload.newBuilder()
+                  .setId(ingestDocument.getFieldValue("_id", String.class))
+                  .setClusterId(ingestDocument.getFieldValue("cluster_id", String.class))
+                  .setLog(ingestDocument.getFieldValue("log", String.class))
+                  .setLogType(ingestDocument.getFieldValue("log_type", String.class))
+                  .setPodName(ingestDocument.getFieldValue("pod_name", String.class))
+                  .setNamespaceName(ingestDocument.getFieldValue("namespace_name", String.class))
+                  .setDeployment(ingestDocument.getFieldValue("deployment", String.class))
+                  .setService(ingestDocument.getFieldValue("service", String.class)).build();
+
+        try {
+            // send payload as http request
+            HttpClient client = HttpClient.newBuilder().executor(Runnable::run).build();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .header("Content-Type", "application/octet-stream")
+                    .POST(HttpRequest.BodyPublishers.ofByteArray(payload.toByteArray()))
+                    .build();
+    
+            client.send(request, HttpResponse.BodyHandlers.ofByteArray());
+        } catch (Exception e) {
+        }
+        
     }
 
     private boolean isPendingDelete (IngestDocument ingestDocument, Connection nc) throws Exception {

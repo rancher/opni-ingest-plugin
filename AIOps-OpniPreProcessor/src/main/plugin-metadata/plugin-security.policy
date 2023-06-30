@@ -6,4 +6,8 @@ permission java.lang.RuntimePermission "accessDeclaredMembers";
 permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
 //nkey
 permission java.io.FilePermission "<<ALL FILES>>", "read";
+//http
+permission java.net.URLPermission "http://opni-pretrained-serve-svc.kuberay.svc:8000/", "POST:Content-Type";
+permission "org.opensearch.secure_sm.ThreadPermission" "modifyArbitraryThread";
+permission "org.opensearch.secure_sm.ThreadPermission" "modifyArbitraryThreadGroup";
 };
