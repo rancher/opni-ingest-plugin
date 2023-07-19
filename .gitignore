@@ -27,6 +27,7 @@ nbactions.xml
 # gradle stuff
 .gradle/
 build/
+!AIOps-OpniPreProcessor/build/generated/source/proto/main/java/org/opensearch/opnipreprocessing/plugin/OpniPayloadProto.java
 bin/
 
 # vscode stuff

@@ -29,9 +29,6 @@ jobs:
 
     - name: Build and Run Tests
       run: |
-          cd Logging-OpniJsonDetector
-          ./gradlew build
-          cd ..
           cd AIOps-OpniPreProcessor/
           ./gradlew build
           cd ..
