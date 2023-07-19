@@ -12,6 +12,10 @@ def projectPath = 'org.opensearch'
 def pathToPlugin = 'opnipreprocessing.plugin'
 def pluginClassName = 'OpniPreprocessingPlugin'
 
+group = "Opni"
+
+licenseHeaders.enabled = false
+thirdPartyAudit.enabled = false
 opensearchplugin {
     name pluginName
     description pluginDescription
@@ -26,14 +30,9 @@ loggerUsageCheck.enabled = false
 // No need to validate pom, as we do not upload to maven/sonatype
 validateNebulaPom.enabled = false
 
-// disable it for ignore licenseheader check of generated code from proto
-licenseHeaders.enabled = false
-// disable it to skip the check, bc it's unhappy with this in protobuf: `Forbidden class/interface use: sun.misc.Unsafe [non-public internal runtime class]`
-thirdPartyAudit.enabled = false
-
 buildscript {
     ext {
-        opensearch_version = "2.4.0-SNAPSHOT"
+        opensearch_version = System.getProperty("opensearch.version", "2.8.0-SNAPSHOT")
     }
 
     repositories {
@@ -41,12 +40,11 @@ buildscript {
         maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
-        // gradlePluginPortal()
     }
 
     dependencies {
         classpath "org.opensearch.gradle:build-tools:${opensearch_version}"
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.18'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.3'
     }
 }
 
@@ -55,17 +53,16 @@ repositories {
     maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
     mavenCentral()
     maven { url "https://plugins.gradle.org/m2/" }
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
 }
 
 dependencies {
     // required for the yaml test to run
     yamlRestTestImplementation 'org.apache.logging.log4j:log4j-core:2.17.1'
-    implementation 'io.nats:jnats:2.14.1-SNAPSHOT' //jnats
+    implementation 'io.nats:jnats:2.16.13' //jnats
     implementation 'net.i2p.crypto:eddsa:0.3.0' //nkey
     // implementation 'com.google.code.gson:gson:2.9.0' //gson
     // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
-    implementation 'com.google.protobuf:protobuf-java:3.21.1'
+    implementation 'com.google.protobuf:protobuf-java:3.22.3'
 
 }
 
@@ -82,25 +79,9 @@ sourceSets {
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:3.7.0"
-    }
-    generateProtoTasks.generatedFilesBaseDir = 'src/'
-
-    generateProtoTasks {
-        // all() returns the collection of all protoc tasks
-        all().each { task ->
-            // Here you can configure the task
-        }
-
-        // In addition to all(), you may get the task collection by various
-        // criteria:
-
-        // (Java only) returns tasks for a sourceSet
-        ofSourceSet('main')
-
+        artifact = "com.google.protobuf:protoc:3.22.3"
     }
 }
-
 
 test {
     include '**/*Tests.class'
@@ -129,4 +110,15 @@ testClusters.integTest {
 
 run {
     useCluster testClusters.integTest
+}
+
+// updateVersion: Task to auto update version to the next development iteration
+task updateVersion {
+    onlyIf { System.getProperty('newVersion') }
+    doLast {
+        ext.newVersion = System.getProperty('newVersion')
+        println "Setting version to ${newVersion}."
+         // String tokenization to support -SNAPSHOT
+        ant.replaceregexp(file:'build.gradle', match: '"opensearch.version", "\\d.*"', replace: '"opensearch.version", "' + newVersion.tokenize('-')[0] + '-SNAPSHOT"', flags:'g', byline:true)
+    }
 }

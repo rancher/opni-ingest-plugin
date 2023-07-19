@@ -20,130 +20,156 @@ public final class OpniPayloadProto {
 
     /**
      * <code>string _id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string _id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
         getClusterIdBytes();
 
     /**
      * <code>string log = 3;</code>
+     * @return The log.
      */
     java.lang.String getLog();
     /**
      * <code>string log = 3;</code>
+     * @return The bytes for log.
      */
     com.google.protobuf.ByteString
         getLogBytes();
 
     /**
      * <code>string masked_log = 4;</code>
+     * @return The maskedLog.
      */
     java.lang.String getMaskedLog();
     /**
      * <code>string masked_log = 4;</code>
+     * @return The bytes for maskedLog.
      */
     com.google.protobuf.ByteString
         getMaskedLogBytes();
 
     /**
      * <code>string anomaly_level = 5;</code>
+     * @return The anomalyLevel.
      */
     java.lang.String getAnomalyLevel();
     /**
      * <code>string anomaly_level = 5;</code>
+     * @return The bytes for anomalyLevel.
      */
     com.google.protobuf.ByteString
         getAnomalyLevelBytes();
 
     /**
      * <code>string log_type = 6;</code>
+     * @return The logType.
      */
     java.lang.String getLogType();
     /**
      * <code>string log_type = 6;</code>
+     * @return The bytes for logType.
      */
     com.google.protobuf.ByteString
         getLogTypeBytes();
 
     /**
      * <code>string template_matched = 7;</code>
+     * @return The templateMatched.
      */
     java.lang.String getTemplateMatched();
     /**
      * <code>string template_matched = 7;</code>
+     * @return The bytes for templateMatched.
      */
     com.google.protobuf.ByteString
         getTemplateMatchedBytes();
 
     /**
      * <code>int64 template_cluster_id = 8;</code>
+     * @return The templateClusterId.
      */
     long getTemplateClusterId();
 
     /**
      * <code>string inference_model = 9;</code>
+     * @return The inferenceModel.
      */
     java.lang.String getInferenceModel();
     /**
      * <code>string inference_model = 9;</code>
+     * @return The bytes for inferenceModel.
      */
     com.google.protobuf.ByteString
         getInferenceModelBytes();
 
     /**
      * <code>float opnilog_confidence = 10;</code>
+     * @return The opnilogConfidence.
      */
     float getOpnilogConfidence();
 
     /**
      * <code>string pod_name = 11;</code>
+     * @return The podName.
      */
     java.lang.String getPodName();
     /**
      * <code>string pod_name = 11;</code>
+     * @return The bytes for podName.
      */
     com.google.protobuf.ByteString
         getPodNameBytes();
 
     /**
      * <code>string namespace_name = 12;</code>
+     * @return The namespaceName.
      */
     java.lang.String getNamespaceName();
     /**
      * <code>string namespace_name = 12;</code>
+     * @return The bytes for namespaceName.
      */
     com.google.protobuf.ByteString
         getNamespaceNameBytes();
 
     /**
      * <code>string deployment = 13;</code>
+     * @return The deployment.
      */
     java.lang.String getDeployment();
     /**
      * <code>string deployment = 13;</code>
+     * @return The bytes for deployment.
      */
     com.google.protobuf.ByteString
         getDeploymentBytes();
 
     /**
      * <code>string service = 14;</code>
+     * @return The service.
      */
     java.lang.String getService();
     /**
      * <code>string service = 14;</code>
+     * @return The bytes for service.
      */
     com.google.protobuf.ByteString
         getServiceBytes();
@@ -151,7 +177,7 @@ public final class OpniPayloadProto {
   /**
    * Protobuf type {@code loganomaly.Payload}
    */
-  public  static final class Payload extends
+  public static final class Payload extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:loganomaly.Payload)
       PayloadOrBuilder {
@@ -176,130 +202,12 @@ public final class OpniPayloadProto {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Payload();
     }
-    private Payload(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
 
-              Id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              log_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              maskedLog_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              anomalyLevel_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              logType_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              templateMatched_ = s;
-              break;
-            }
-            case 64: {
-
-              templateClusterId_ = input.readInt64();
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              inferenceModel_ = s;
-              break;
-            }
-            case 85: {
-
-              opnilogConfidence_ = input.readFloat();
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              podName_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              namespaceName_ = s;
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deployment_ = s;
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              service_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.internal_static_loganomaly_Payload_descriptor;
@@ -314,10 +222,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int _ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object Id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object Id_ = "";
     /**
      * <code>string _id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = Id_;
       if (ref instanceof java.lang.String) {
@@ -332,7 +243,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string _id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = Id_;
@@ -348,10 +261,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int CLUSTER_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object clusterId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clusterId_ = "";
     /**
      * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
      */
+    @java.lang.Override
     public java.lang.String getClusterId() {
       java.lang.Object ref = clusterId_;
       if (ref instanceof java.lang.String) {
@@ -366,7 +282,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getClusterIdBytes() {
       java.lang.Object ref = clusterId_;
@@ -382,10 +300,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int LOG_FIELD_NUMBER = 3;
-    private volatile java.lang.Object log_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object log_ = "";
     /**
      * <code>string log = 3;</code>
+     * @return The log.
      */
+    @java.lang.Override
     public java.lang.String getLog() {
       java.lang.Object ref = log_;
       if (ref instanceof java.lang.String) {
@@ -400,7 +321,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string log = 3;</code>
+     * @return The bytes for log.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogBytes() {
       java.lang.Object ref = log_;
@@ -416,10 +339,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int MASKED_LOG_FIELD_NUMBER = 4;
-    private volatile java.lang.Object maskedLog_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maskedLog_ = "";
     /**
      * <code>string masked_log = 4;</code>
+     * @return The maskedLog.
      */
+    @java.lang.Override
     public java.lang.String getMaskedLog() {
       java.lang.Object ref = maskedLog_;
       if (ref instanceof java.lang.String) {
@@ -434,7 +360,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string masked_log = 4;</code>
+     * @return The bytes for maskedLog.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMaskedLogBytes() {
       java.lang.Object ref = maskedLog_;
@@ -450,10 +378,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int ANOMALY_LEVEL_FIELD_NUMBER = 5;
-    private volatile java.lang.Object anomalyLevel_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object anomalyLevel_ = "";
     /**
      * <code>string anomaly_level = 5;</code>
+     * @return The anomalyLevel.
      */
+    @java.lang.Override
     public java.lang.String getAnomalyLevel() {
       java.lang.Object ref = anomalyLevel_;
       if (ref instanceof java.lang.String) {
@@ -468,7 +399,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string anomaly_level = 5;</code>
+     * @return The bytes for anomalyLevel.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getAnomalyLevelBytes() {
       java.lang.Object ref = anomalyLevel_;
@@ -484,10 +417,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int LOG_TYPE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object logType_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object logType_ = "";
     /**
      * <code>string log_type = 6;</code>
+     * @return The logType.
      */
+    @java.lang.Override
     public java.lang.String getLogType() {
       java.lang.Object ref = logType_;
       if (ref instanceof java.lang.String) {
@@ -502,7 +438,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string log_type = 6;</code>
+     * @return The bytes for logType.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getLogTypeBytes() {
       java.lang.Object ref = logType_;
@@ -518,10 +456,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int TEMPLATE_MATCHED_FIELD_NUMBER = 7;
-    private volatile java.lang.Object templateMatched_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object templateMatched_ = "";
     /**
      * <code>string template_matched = 7;</code>
+     * @return The templateMatched.
      */
+    @java.lang.Override
     public java.lang.String getTemplateMatched() {
       java.lang.Object ref = templateMatched_;
       if (ref instanceof java.lang.String) {
@@ -536,7 +477,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string template_matched = 7;</code>
+     * @return The bytes for templateMatched.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTemplateMatchedBytes() {
       java.lang.Object ref = templateMatched_;
@@ -552,19 +495,24 @@ public final class OpniPayloadProto {
     }
 
     public static final int TEMPLATE_CLUSTER_ID_FIELD_NUMBER = 8;
-    private long templateClusterId_;
+    private long templateClusterId_ = 0L;
     /**
      * <code>int64 template_cluster_id = 8;</code>
+     * @return The templateClusterId.
      */
+    @java.lang.Override
     public long getTemplateClusterId() {
       return templateClusterId_;
     }
 
     public static final int INFERENCE_MODEL_FIELD_NUMBER = 9;
-    private volatile java.lang.Object inferenceModel_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object inferenceModel_ = "";
     /**
      * <code>string inference_model = 9;</code>
+     * @return The inferenceModel.
      */
+    @java.lang.Override
     public java.lang.String getInferenceModel() {
       java.lang.Object ref = inferenceModel_;
       if (ref instanceof java.lang.String) {
@@ -579,7 +527,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string inference_model = 9;</code>
+     * @return The bytes for inferenceModel.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getInferenceModelBytes() {
       java.lang.Object ref = inferenceModel_;
@@ -595,19 +545,24 @@ public final class OpniPayloadProto {
     }
 
     public static final int OPNILOG_CONFIDENCE_FIELD_NUMBER = 10;
-    private float opnilogConfidence_;
+    private float opnilogConfidence_ = 0F;
     /**
      * <code>float opnilog_confidence = 10;</code>
+     * @return The opnilogConfidence.
      */
+    @java.lang.Override
     public float getOpnilogConfidence() {
       return opnilogConfidence_;
     }
 
     public static final int POD_NAME_FIELD_NUMBER = 11;
-    private volatile java.lang.Object podName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object podName_ = "";
     /**
      * <code>string pod_name = 11;</code>
+     * @return The podName.
      */
+    @java.lang.Override
     public java.lang.String getPodName() {
       java.lang.Object ref = podName_;
       if (ref instanceof java.lang.String) {
@@ -622,7 +577,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string pod_name = 11;</code>
+     * @return The bytes for podName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getPodNameBytes() {
       java.lang.Object ref = podName_;
@@ -638,10 +595,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int NAMESPACE_NAME_FIELD_NUMBER = 12;
-    private volatile java.lang.Object namespaceName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object namespaceName_ = "";
     /**
      * <code>string namespace_name = 12;</code>
+     * @return The namespaceName.
      */
+    @java.lang.Override
     public java.lang.String getNamespaceName() {
       java.lang.Object ref = namespaceName_;
       if (ref instanceof java.lang.String) {
@@ -656,7 +616,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string namespace_name = 12;</code>
+     * @return The bytes for namespaceName.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNamespaceNameBytes() {
       java.lang.Object ref = namespaceName_;
@@ -672,10 +634,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int DEPLOYMENT_FIELD_NUMBER = 13;
-    private volatile java.lang.Object deployment_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployment_ = "";
     /**
      * <code>string deployment = 13;</code>
+     * @return The deployment.
      */
+    @java.lang.Override
     public java.lang.String getDeployment() {
       java.lang.Object ref = deployment_;
       if (ref instanceof java.lang.String) {
@@ -690,7 +655,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string deployment = 13;</code>
+     * @return The bytes for deployment.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeploymentBytes() {
       java.lang.Object ref = deployment_;
@@ -706,10 +673,13 @@ public final class OpniPayloadProto {
     }
 
     public static final int SERVICE_FIELD_NUMBER = 14;
-    private volatile java.lang.Object service_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object service_ = "";
     /**
      * <code>string service = 14;</code>
+     * @return The service.
      */
+    @java.lang.Override
     public java.lang.String getService() {
       java.lang.Object ref = service_;
       if (ref instanceof java.lang.String) {
@@ -724,7 +694,9 @@ public final class OpniPayloadProto {
     }
     /**
      * <code>string service = 14;</code>
+     * @return The bytes for service.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getServiceBytes() {
       java.lang.Object ref = service_;
@@ -753,49 +725,49 @@ public final class OpniPayloadProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(Id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, Id_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
       }
-      if (!getLogBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, log_);
       }
-      if (!getMaskedLogBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maskedLog_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, maskedLog_);
       }
-      if (!getAnomalyLevelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(anomalyLevel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, anomalyLevel_);
       }
-      if (!getLogTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, logType_);
       }
-      if (!getTemplateMatchedBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateMatched_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, templateMatched_);
       }
       if (templateClusterId_ != 0L) {
         output.writeInt64(8, templateClusterId_);
       }
-      if (!getInferenceModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inferenceModel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, inferenceModel_);
       }
-      if (opnilogConfidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(opnilogConfidence_) != 0) {
         output.writeFloat(10, opnilogConfidence_);
       }
-      if (!getPodNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(podName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, podName_);
       }
-      if (!getNamespaceNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespaceName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, namespaceName_);
       }
-      if (!getDeploymentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployment_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, deployment_);
       }
-      if (!getServiceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(service_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, service_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -804,51 +776,51 @@ public final class OpniPayloadProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(Id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, Id_);
       }
-      if (!getClusterIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
       }
-      if (!getLogBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, log_);
       }
-      if (!getMaskedLogBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maskedLog_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, maskedLog_);
       }
-      if (!getAnomalyLevelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(anomalyLevel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, anomalyLevel_);
       }
-      if (!getLogTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, logType_);
       }
-      if (!getTemplateMatchedBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateMatched_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, templateMatched_);
       }
       if (templateClusterId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, templateClusterId_);
       }
-      if (!getInferenceModelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inferenceModel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, inferenceModel_);
       }
-      if (opnilogConfidence_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(opnilogConfidence_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(10, opnilogConfidence_);
       }
-      if (!getPodNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(podName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, podName_);
       }
-      if (!getNamespaceNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(namespaceName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, namespaceName_);
       }
-      if (!getDeploymentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployment_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, deployment_);
       }
-      if (!getServiceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(service_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, service_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -892,7 +864,7 @@ public final class OpniPayloadProto {
           .equals(other.getDeployment())) return false;
       if (!getService()
           .equals(other.getService())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -933,7 +905,7 @@ public final class OpniPayloadProto {
       hash = (53 * hash) + getDeployment().hashCode();
       hash = (37 * hash) + SERVICE_FIELD_NUMBER;
       hash = (53 * hash) + getService().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1050,50 +1022,32 @@ public final class OpniPayloadProto {
 
       // Construct using org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         Id_ = "";
-
         clusterId_ = "";
-
         log_ = "";
-
         maskedLog_ = "";
-
         anomalyLevel_ = "";
-
         logType_ = "";
-
         templateMatched_ = "";
-
         templateClusterId_ = 0L;
-
         inferenceModel_ = "";
-
         opnilogConfidence_ = 0F;
-
         podName_ = "";
-
         namespaceName_ = "";
-
         deployment_ = "";
-
         service_ = "";
-
         return this;
       }
 
@@ -1120,56 +1074,57 @@ public final class OpniPayloadProto {
       @java.lang.Override
       public org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload buildPartial() {
         org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload result = new org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload(this);
-        result.Id_ = Id_;
-        result.clusterId_ = clusterId_;
-        result.log_ = log_;
-        result.maskedLog_ = maskedLog_;
-        result.anomalyLevel_ = anomalyLevel_;
-        result.logType_ = logType_;
-        result.templateMatched_ = templateMatched_;
-        result.templateClusterId_ = templateClusterId_;
-        result.inferenceModel_ = inferenceModel_;
-        result.opnilogConfidence_ = opnilogConfidence_;
-        result.podName_ = podName_;
-        result.namespaceName_ = namespaceName_;
-        result.deployment_ = deployment_;
-        result.service_ = service_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.Id_ = Id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clusterId_ = clusterId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.log_ = log_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maskedLog_ = maskedLog_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.anomalyLevel_ = anomalyLevel_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.logType_ = logType_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.templateMatched_ = templateMatched_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.templateClusterId_ = templateClusterId_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.inferenceModel_ = inferenceModel_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.opnilogConfidence_ = opnilogConfidence_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.podName_ = podName_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.namespaceName_ = namespaceName_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.deployment_ = deployment_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.service_ = service_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload) {
@@ -1184,30 +1139,37 @@ public final class OpniPayloadProto {
         if (other == org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           Id_ = other.Id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getClusterId().isEmpty()) {
           clusterId_ = other.clusterId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getLog().isEmpty()) {
           log_ = other.log_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getMaskedLog().isEmpty()) {
           maskedLog_ = other.maskedLog_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getAnomalyLevel().isEmpty()) {
           anomalyLevel_ = other.anomalyLevel_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getLogType().isEmpty()) {
           logType_ = other.logType_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getTemplateMatched().isEmpty()) {
           templateMatched_ = other.templateMatched_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.getTemplateClusterId() != 0L) {
@@ -1215,6 +1177,7 @@ public final class OpniPayloadProto {
         }
         if (!other.getInferenceModel().isEmpty()) {
           inferenceModel_ = other.inferenceModel_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.getOpnilogConfidence() != 0F) {
@@ -1222,21 +1185,25 @@ public final class OpniPayloadProto {
         }
         if (!other.getPodName().isEmpty()) {
           podName_ = other.podName_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (!other.getNamespaceName().isEmpty()) {
           namespaceName_ = other.namespaceName_;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         if (!other.getDeployment().isEmpty()) {
           deployment_ = other.deployment_;
+          bitField0_ |= 0x00001000;
           onChanged();
         }
         if (!other.getService().isEmpty()) {
           service_ = other.service_;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1251,23 +1218,108 @@ public final class OpniPayloadProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                Id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                clusterId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                log_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                maskedLog_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                anomalyLevel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                logType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                templateMatched_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                templateClusterId_ = input.readInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                inferenceModel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 85: {
+                opnilogConfidence_ = input.readFloat();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 85
+              case 90: {
+                podName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                namespaceName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                deployment_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                service_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object Id_ = "";
       /**
        * <code>string _id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = Id_;
@@ -1283,6 +1335,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string _id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1299,37 +1352,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string _id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         Id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <code>string _id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         Id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>string _id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         Id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1337,6 +1391,7 @@ public final class OpniPayloadProto {
       private java.lang.Object clusterId_ = "";
       /**
        * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
        */
       public java.lang.String getClusterId() {
         java.lang.Object ref = clusterId_;
@@ -1352,6 +1407,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
           getClusterIdBytes() {
@@ -1368,37 +1424,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         clusterId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearClusterId() {
-        
         clusterId_ = getDefaultInstance().getClusterId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setClusterIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         clusterId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1406,6 +1463,7 @@ public final class OpniPayloadProto {
       private java.lang.Object log_ = "";
       /**
        * <code>string log = 3;</code>
+       * @return The log.
        */
       public java.lang.String getLog() {
         java.lang.Object ref = log_;
@@ -1421,6 +1479,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string log = 3;</code>
+       * @return The bytes for log.
        */
       public com.google.protobuf.ByteString
           getLogBytes() {
@@ -1437,37 +1496,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string log = 3;</code>
+       * @param value The log to set.
+       * @return This builder for chaining.
        */
       public Builder setLog(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         log_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <code>string log = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLog() {
-        
         log_ = getDefaultInstance().getLog();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <code>string log = 3;</code>
+       * @param value The bytes for log to set.
+       * @return This builder for chaining.
        */
       public Builder setLogBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         log_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1475,6 +1535,7 @@ public final class OpniPayloadProto {
       private java.lang.Object maskedLog_ = "";
       /**
        * <code>string masked_log = 4;</code>
+       * @return The maskedLog.
        */
       public java.lang.String getMaskedLog() {
         java.lang.Object ref = maskedLog_;
@@ -1490,6 +1551,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string masked_log = 4;</code>
+       * @return The bytes for maskedLog.
        */
       public com.google.protobuf.ByteString
           getMaskedLogBytes() {
@@ -1506,37 +1568,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string masked_log = 4;</code>
+       * @param value The maskedLog to set.
+       * @return This builder for chaining.
        */
       public Builder setMaskedLog(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         maskedLog_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <code>string masked_log = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMaskedLog() {
-        
         maskedLog_ = getDefaultInstance().getMaskedLog();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
        * <code>string masked_log = 4;</code>
+       * @param value The bytes for maskedLog to set.
+       * @return This builder for chaining.
        */
       public Builder setMaskedLogBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         maskedLog_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1544,6 +1607,7 @@ public final class OpniPayloadProto {
       private java.lang.Object anomalyLevel_ = "";
       /**
        * <code>string anomaly_level = 5;</code>
+       * @return The anomalyLevel.
        */
       public java.lang.String getAnomalyLevel() {
         java.lang.Object ref = anomalyLevel_;
@@ -1559,6 +1623,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string anomaly_level = 5;</code>
+       * @return The bytes for anomalyLevel.
        */
       public com.google.protobuf.ByteString
           getAnomalyLevelBytes() {
@@ -1575,37 +1640,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string anomaly_level = 5;</code>
+       * @param value The anomalyLevel to set.
+       * @return This builder for chaining.
        */
       public Builder setAnomalyLevel(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         anomalyLevel_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <code>string anomaly_level = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAnomalyLevel() {
-        
         anomalyLevel_ = getDefaultInstance().getAnomalyLevel();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
        * <code>string anomaly_level = 5;</code>
+       * @param value The bytes for anomalyLevel to set.
+       * @return This builder for chaining.
        */
       public Builder setAnomalyLevelBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         anomalyLevel_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1613,6 +1679,7 @@ public final class OpniPayloadProto {
       private java.lang.Object logType_ = "";
       /**
        * <code>string log_type = 6;</code>
+       * @return The logType.
        */
       public java.lang.String getLogType() {
         java.lang.Object ref = logType_;
@@ -1628,6 +1695,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string log_type = 6;</code>
+       * @return The bytes for logType.
        */
       public com.google.protobuf.ByteString
           getLogTypeBytes() {
@@ -1644,37 +1712,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string log_type = 6;</code>
+       * @param value The logType to set.
+       * @return This builder for chaining.
        */
       public Builder setLogType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         logType_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
        * <code>string log_type = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLogType() {
-        
         logType_ = getDefaultInstance().getLogType();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
        * <code>string log_type = 6;</code>
+       * @param value The bytes for logType to set.
+       * @return This builder for chaining.
        */
       public Builder setLogTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         logType_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1682,6 +1751,7 @@ public final class OpniPayloadProto {
       private java.lang.Object templateMatched_ = "";
       /**
        * <code>string template_matched = 7;</code>
+       * @return The templateMatched.
        */
       public java.lang.String getTemplateMatched() {
         java.lang.Object ref = templateMatched_;
@@ -1697,6 +1767,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string template_matched = 7;</code>
+       * @return The bytes for templateMatched.
        */
       public com.google.protobuf.ByteString
           getTemplateMatchedBytes() {
@@ -1713,37 +1784,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string template_matched = 7;</code>
+       * @param value The templateMatched to set.
+       * @return This builder for chaining.
        */
       public Builder setTemplateMatched(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         templateMatched_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
        * <code>string template_matched = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTemplateMatched() {
-        
         templateMatched_ = getDefaultInstance().getTemplateMatched();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
       /**
        * <code>string template_matched = 7;</code>
+       * @param value The bytes for templateMatched to set.
+       * @return This builder for chaining.
        */
       public Builder setTemplateMatchedBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         templateMatched_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1751,24 +1823,30 @@ public final class OpniPayloadProto {
       private long templateClusterId_ ;
       /**
        * <code>int64 template_cluster_id = 8;</code>
+       * @return The templateClusterId.
        */
+      @java.lang.Override
       public long getTemplateClusterId() {
         return templateClusterId_;
       }
       /**
        * <code>int64 template_cluster_id = 8;</code>
+       * @param value The templateClusterId to set.
+       * @return This builder for chaining.
        */
       public Builder setTemplateClusterId(long value) {
-        
+
         templateClusterId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
        * <code>int64 template_cluster_id = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTemplateClusterId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         templateClusterId_ = 0L;
         onChanged();
         return this;
@@ -1777,6 +1855,7 @@ public final class OpniPayloadProto {
       private java.lang.Object inferenceModel_ = "";
       /**
        * <code>string inference_model = 9;</code>
+       * @return The inferenceModel.
        */
       public java.lang.String getInferenceModel() {
         java.lang.Object ref = inferenceModel_;
@@ -1792,6 +1871,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string inference_model = 9;</code>
+       * @return The bytes for inferenceModel.
        */
       public com.google.protobuf.ByteString
           getInferenceModelBytes() {
@@ -1808,37 +1888,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string inference_model = 9;</code>
+       * @param value The inferenceModel to set.
+       * @return This builder for chaining.
        */
       public Builder setInferenceModel(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         inferenceModel_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
        * <code>string inference_model = 9;</code>
+       * @return This builder for chaining.
        */
       public Builder clearInferenceModel() {
-        
         inferenceModel_ = getDefaultInstance().getInferenceModel();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
        * <code>string inference_model = 9;</code>
+       * @param value The bytes for inferenceModel to set.
+       * @return This builder for chaining.
        */
       public Builder setInferenceModelBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         inferenceModel_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1846,24 +1927,30 @@ public final class OpniPayloadProto {
       private float opnilogConfidence_ ;
       /**
        * <code>float opnilog_confidence = 10;</code>
+       * @return The opnilogConfidence.
        */
+      @java.lang.Override
       public float getOpnilogConfidence() {
         return opnilogConfidence_;
       }
       /**
        * <code>float opnilog_confidence = 10;</code>
+       * @param value The opnilogConfidence to set.
+       * @return This builder for chaining.
        */
       public Builder setOpnilogConfidence(float value) {
-        
+
         opnilogConfidence_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
       /**
        * <code>float opnilog_confidence = 10;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOpnilogConfidence() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         opnilogConfidence_ = 0F;
         onChanged();
         return this;
@@ -1872,6 +1959,7 @@ public final class OpniPayloadProto {
       private java.lang.Object podName_ = "";
       /**
        * <code>string pod_name = 11;</code>
+       * @return The podName.
        */
       public java.lang.String getPodName() {
         java.lang.Object ref = podName_;
@@ -1887,6 +1975,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string pod_name = 11;</code>
+       * @return The bytes for podName.
        */
       public com.google.protobuf.ByteString
           getPodNameBytes() {
@@ -1903,37 +1992,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string pod_name = 11;</code>
+       * @param value The podName to set.
+       * @return This builder for chaining.
        */
       public Builder setPodName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         podName_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
        * <code>string pod_name = 11;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPodName() {
-        
         podName_ = getDefaultInstance().getPodName();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
       /**
        * <code>string pod_name = 11;</code>
+       * @param value The bytes for podName to set.
+       * @return This builder for chaining.
        */
       public Builder setPodNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         podName_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -1941,6 +2031,7 @@ public final class OpniPayloadProto {
       private java.lang.Object namespaceName_ = "";
       /**
        * <code>string namespace_name = 12;</code>
+       * @return The namespaceName.
        */
       public java.lang.String getNamespaceName() {
         java.lang.Object ref = namespaceName_;
@@ -1956,6 +2047,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string namespace_name = 12;</code>
+       * @return The bytes for namespaceName.
        */
       public com.google.protobuf.ByteString
           getNamespaceNameBytes() {
@@ -1972,37 +2064,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string namespace_name = 12;</code>
+       * @param value The namespaceName to set.
+       * @return This builder for chaining.
        */
       public Builder setNamespaceName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         namespaceName_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
       /**
        * <code>string namespace_name = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNamespaceName() {
-        
         namespaceName_ = getDefaultInstance().getNamespaceName();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
       /**
        * <code>string namespace_name = 12;</code>
+       * @param value The bytes for namespaceName to set.
+       * @return This builder for chaining.
        */
       public Builder setNamespaceNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         namespaceName_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2010,6 +2103,7 @@ public final class OpniPayloadProto {
       private java.lang.Object deployment_ = "";
       /**
        * <code>string deployment = 13;</code>
+       * @return The deployment.
        */
       public java.lang.String getDeployment() {
         java.lang.Object ref = deployment_;
@@ -2025,6 +2119,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string deployment = 13;</code>
+       * @return The bytes for deployment.
        */
       public com.google.protobuf.ByteString
           getDeploymentBytes() {
@@ -2041,37 +2136,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string deployment = 13;</code>
+       * @param value The deployment to set.
+       * @return This builder for chaining.
        */
       public Builder setDeployment(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         deployment_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
       /**
        * <code>string deployment = 13;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeployment() {
-        
         deployment_ = getDefaultInstance().getDeployment();
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
       /**
        * <code>string deployment = 13;</code>
+       * @param value The bytes for deployment to set.
+       * @return This builder for chaining.
        */
       public Builder setDeploymentBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         deployment_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -2079,6 +2175,7 @@ public final class OpniPayloadProto {
       private java.lang.Object service_ = "";
       /**
        * <code>string service = 14;</code>
+       * @return The service.
        */
       public java.lang.String getService() {
         java.lang.Object ref = service_;
@@ -2094,6 +2191,7 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string service = 14;</code>
+       * @return The bytes for service.
        */
       public com.google.protobuf.ByteString
           getServiceBytes() {
@@ -2110,37 +2208,38 @@ public final class OpniPayloadProto {
       }
       /**
        * <code>string service = 14;</code>
+       * @param value The service to set.
+       * @return This builder for chaining.
        */
       public Builder setService(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         service_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
       /**
        * <code>string service = 14;</code>
+       * @return This builder for chaining.
        */
       public Builder clearService() {
-        
         service_ = getDefaultInstance().getService();
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
       /**
        * <code>string service = 14;</code>
+       * @param value The bytes for service to set.
+       * @return This builder for chaining.
        */
       public Builder setServiceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         service_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -2177,7 +2276,18 @@ public final class OpniPayloadProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Payload(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2228,7 +2338,7 @@ public final class OpniPayloadProto {
   /**
    * Protobuf type {@code loganomaly.PayloadList}
    */
-  public  static final class PayloadList extends
+  public static final class PayloadList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:loganomaly.PayloadList)
       PayloadListOrBuilder {
@@ -2242,60 +2352,12 @@ public final class OpniPayloadProto {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PayloadList();
     }
-    private PayloadList(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                items_ = new java.util.ArrayList<org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              items_.add(
-                  input.readMessage(org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          items_ = java.util.Collections.unmodifiableList(items_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
+
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.internal_static_loganomaly_PayloadList_descriptor;
@@ -2310,16 +2372,19 @@ public final class OpniPayloadProto {
     }
 
     public static final int ITEMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload> items_;
     /**
      * <code>repeated .loganomaly.Payload items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload> getItemsList() {
       return items_;
     }
     /**
      * <code>repeated .loganomaly.Payload items = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -2327,18 +2392,21 @@ public final class OpniPayloadProto {
     /**
      * <code>repeated .loganomaly.Payload items = 1;</code>
      */
+    @java.lang.Override
     public int getItemsCount() {
       return items_.size();
     }
     /**
      * <code>repeated .loganomaly.Payload items = 1;</code>
      */
+    @java.lang.Override
     public org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload getItems(int index) {
       return items_.get(index);
     }
     /**
      * <code>repeated .loganomaly.Payload items = 1;</code>
      */
+    @java.lang.Override
     public org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
@@ -2361,7 +2429,7 @@ public final class OpniPayloadProto {
       for (int i = 0; i < items_.size(); i++) {
         output.writeMessage(1, items_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2374,7 +2442,7 @@ public final class OpniPayloadProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, items_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2391,7 +2459,7 @@ public final class OpniPayloadProto {
 
       if (!getItemsList()
           .equals(other.getItemsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2406,7 +2474,7 @@ public final class OpniPayloadProto {
         hash = (37 * hash) + ITEMS_FIELD_NUMBER;
         hash = (53 * hash) + getItemsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2523,29 +2591,25 @@ public final class OpniPayloadProto {
 
       // Construct using org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getItemsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (itemsBuilder_ == null) {
           items_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          items_ = null;
           itemsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -2572,7 +2636,13 @@ public final class OpniPayloadProto {
       @java.lang.Override
       public org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList buildPartial() {
         org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList result = new org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList result) {
         if (itemsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             items_ = java.util.Collections.unmodifiableList(items_);
@@ -2582,42 +2652,12 @@ public final class OpniPayloadProto {
         } else {
           result.items_ = itemsBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList) {
@@ -2656,7 +2696,7 @@ public final class OpniPayloadProto {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2671,17 +2711,43 @@ public final class OpniPayloadProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload m =
+                    input.readMessage(
+                        org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.Payload.parser(),
+                        extensionRegistry);
+                if (itemsBuilder_ == null) {
+                  ensureItemsIsMutable();
+                  items_.add(m);
+                } else {
+                  itemsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (org.opensearch.opnipreprocessing.plugin.OpniPayloadProto.PayloadList) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2958,7 +3024,18 @@ public final class OpniPayloadProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PayloadList(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3010,18 +3087,10 @@ public final class OpniPayloadProto {
       "ch.opnipreprocessing.pluginB\020OpniPayload" +
       "Protob\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_loganomaly_Payload_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_loganomaly_Payload_fieldAccessorTable = new
